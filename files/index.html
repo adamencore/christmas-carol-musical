@@ -119,11 +119,12 @@
     left: 50%;
     width: 720px;
     height: 500px;
-    background: radial-gradient(ellipse at center, rgba(201, 168, 106, 0.20) 0%, transparent 60%);
+    background: radial-gradient(ellipse at center, rgba(201, 168, 106, 0.28) 0%, transparent 60%);
     pointer-events: none;
     z-index: 0;
     transform: translateX(-50%);
-    animation: glow-warm 18s ease-in-out infinite;
+    will-change: transform;
+    animation: glow-warm 14s ease-in-out infinite;
   }
 
   /* Cool teal counter-glow drifting the opposite direction */
@@ -134,21 +135,22 @@
     left: 50%;
     width: 620px;
     height: 460px;
-    background: radial-gradient(ellipse at center, rgba(31, 85, 96, 0.16) 0%, transparent 65%);
+    background: radial-gradient(ellipse at center, rgba(31, 85, 96, 0.24) 0%, transparent 65%);
     pointer-events: none;
     z-index: 0;
     transform: translateX(-50%);
-    animation: glow-cool 24s ease-in-out infinite;
+    will-change: transform;
+    animation: glow-cool 18s ease-in-out infinite;
   }
 
   @keyframes glow-warm {
-    0%, 100% { transform: translateX(-50%) translate(0, 0) scale(1); }
-    50%      { transform: translateX(-50%) translate(40px, 25px) scale(1.1); }
+    0%, 100% { transform: translateX(-50%) translate(-60px, 0) scale(1); }
+    50%      { transform: translateX(-50%) translate(80px, 40px) scale(1.2); }
   }
 
   @keyframes glow-cool {
-    0%, 100% { transform: translateX(-50%) translate(30px, 10px) scale(1.05); }
-    50%      { transform: translateX(-50%) translate(-50px, -15px) scale(1); }
+    0%, 100% { transform: translateX(-50%) translate(70px, 30px) scale(1.15); }
+    50%      { transform: translateX(-50%) translate(-90px, -30px) scale(0.95); }
   }
 
   @media (prefers-reduced-motion: reduce) {
