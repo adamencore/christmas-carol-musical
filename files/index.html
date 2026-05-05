@@ -167,7 +167,7 @@
   .hero-logo img {
     display: block;
     width: 100%;
-    max-width: 360px;
+    max-width: 420px;
     height: auto;
     margin: 0 auto;
   }
@@ -381,18 +381,19 @@
 
   .video-frame {
     position: relative;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto 48px;
+    aspect-ratio: 16/9;
     background: var(--ink-soft);
     border: 1px solid rgba(201, 168, 106, 0.25);
     box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(201, 168, 106, 0.05);
-    padding: 8px;
   }
 
   .video-frame iframe {
-    display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: 166px;
+    height: 100%;
     border: 0;
   }
 
@@ -790,10 +791,11 @@
 
     <div class="container">
       <div class="video-frame">
-        <iframe scrolling="no" frameborder="no" allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2309177933&color=%23c9a86a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                title="A Christmas Carol — A New Musical">
-        </iframe>
+        <iframe src="https://www.youtube.com/embed/J2vzfhSbFxg"
+                title="A Christmas Carol — A New Musical"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
       <a href="mailto:adammrecord@gmail.com?subject=A%20Christmas%20Carol%20Musical%20%E2%80%94%20Licensing%20Inquiry" class="btn btn-solid btn-center">I'm Interested</a>
     </div>
